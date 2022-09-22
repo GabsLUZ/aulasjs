@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio06</title>
+</head>
+<body>
+    <script>
+        const brancos = Number(prompt("Digite os Votos em Branco: "))
+        const nulos = Number(prompt("Digite os Votos em Nulos: "))
+        const validos = Number(prompt("Digite os Votos em Validos: "))
+
+        const total = brancos+nulos+validos
+
+        const Percentualbranco = (brancos*100)/total
+        const Percentualnulos = (nulos*100)/total
+        const Percentualvalidos = (validos*100)/total
+
+
+        alert(` Forma totalizados ${total} votos: \n
+               Percentual votos Brancos: ${Percentualbranco.toFixed(2)}% \n
+               Percentual votos Nulos: ${Percentualnulos.toFixed(2)}% \n
+               Percentual votos em Validos: ${Percentualvalidos.toFixed(2)}%`)
+    </script>
+</body>
+</html>
