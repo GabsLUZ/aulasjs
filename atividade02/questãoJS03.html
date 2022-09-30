@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão03</title>
+</head>
+<script>
+    const sexo = String(prompt("Digite seu Sexo M ou F: "))
+    const altura = Number(prompt("Digite seu altura a baixo"))
+    sexo.toUpperCase()
+    if(sexo == "M"){
+        const IdealM = (72*altura)-58
+        alert(`Seu peso ideal é de: ${IdealM.toFixed(2)}`)
+    }
+    else if(sexo == "F"){
+        const IdealF = (62*altura)-44
+        alert(`Sua peso ideal é de: ${IdealF.toFixed(2)}`)
+    }
+
+    else {
+        alert(`Erro na inserção dos dados, tente novamente`)
+    }
+</script>
+<body>
+    
+</body>
+</html>
