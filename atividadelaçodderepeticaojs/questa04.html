@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao04</title>
+</head>
+<script>
+ let anosSelecionados = []
+ let anoCopa = []
+ let primeiraCopa = 1930
+ let contador
+ let calculomax
+
+ while(true){
+    let anoInsert = Number(prompt('Digite o ano:'))
+    if(anoInsert != 0 && anoInsert != 1942 && anoInsert != 1946){
+        anosSelecionados.push(anoInsert)
+
+    }
+    if(anoInsert == 0){
+        break
+    }
+ }
+
+ anosSelecionados.forEach(ano => {
+    calculomax= ano
+    if(ano == primeiraCopa){
+        anoCopa.push(ano)
+
+    }else if(ano > 1930){
+        while(true){
+            calculomax = calculomax - 4
+
+        }if(calculomax == 1930){
+            anoCopa.push(ano)
+            break
+        }
+        if(calculomax < 1930){
+            anoCopa.push(ano)
+            break
+        }
+        else{
+            anoSemCopa.push(ano)
+        }
+    }
+ })
+</script>
+<body>
+    
+</body>
+</html>

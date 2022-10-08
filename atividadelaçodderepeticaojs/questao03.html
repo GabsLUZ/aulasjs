@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao03</title>
+</head>
+<script>
+let totalCompra = Number(prompt('Insirao valor total: '))
+
+let maxParcela = 6
+let valorParcela = totalCompra / maxParcela
+let valRound = Math.floor(valorParcela*100/100)
+
+while(true){
+    if(valRound * maxParcela != totalCompra){
+        valorParcela = 0
+        maxParcela--
+        valorParcela = totalCompra / maxParcela
+    }
+    if(maxParcela == 0){
+        alert('O valor não atende os requisitos: ')
+        break
+    }
+    if(valRound <= 20){
+        alert('o número das parcelas será: ${maxParcelas}x, o valor de cada parcela será: ${valParcela}')
+        break
+    }
+}
+
+</script>
+<body>
+    
+</body>
+</html>

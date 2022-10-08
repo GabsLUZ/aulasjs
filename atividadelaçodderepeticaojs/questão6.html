@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let valorinserido = Number(prompt("Insira o valor: "))
+    let informar = '';
+
+    let listadivisores = []
+    let somardivisores = 0
+
+    for (let i = 1; i < valorinserido; i++){
+        if (valorinserido % i == 0) {
+            listadivisores.push(i)
+        }
+    }
+        listadivisores.push(valorinserido)
+        listadivisores.pop()
+    
+    for (let i = 0; i < listadivisores.length; i++){
+        somardivisores += listadivisores[i]
+    }
+
+    if (somardivisores != valorinserido){
+        informar += `O valor ${valorinserido} não é perfeito\n
+        A lista de divisores é ${listadivisores}\n
+        A soma dos divisores é ${somardivisores}
+        `
+    }
+    else{
+        informar += `O valor ${valorinserido} é perfeito\n
+        A lista de divisores é ${listadivisores}\n
+        A soma dos divisores é ${somardivisores}
+        `
+    }
+
+    alert(informar)
+</script>
+<body>
+    
+</body>
+</html>
