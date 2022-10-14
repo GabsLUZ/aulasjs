@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quartao04</title>
+</head>
+<body>
+   <script>
+    let listaAluno = []
+    let listaNota = []
+    let nota = []
+    let dado = []
+
+    while(true){
+        let nomeAluno = prompt('Digite o nome do aluno (Se deseja sair digite "FIM"): ')
+
+        if(nomeAluno.toLowerCase() == 'FIM'){
+            break
+        }
+
+        let notaAluno = Number(prompt('Digite a nota do aluno: '))
+        listaAluno.push(nomeAluno)
+        listaNota.push(notaAluno)
+    }
+
+    for(let i = 0; i< listaAluno.length; i++){
+        dado[i] = [
+            {
+                nome: listaAluno[i],
+                nota: listaAluno[i]
+            }
+            
+        ]
+        }
+    dado.forEach(a => {
+        nota.push(a[0].nota);
+    })
+
+    let maxNota = Math.max(...nota);
+    let arr = dado.filter(a => a[0].nota >= 7);
+
+    let melhoresAlunos = []
+
+    arr.forEach(aluno => {
+        melhoresAlunos.push(aluno[0].nome)
+    })
+
+    if(arr.length <= 0){
+        alert('Não tem alunos destaques na turma!')
+    }
+    else{
+        alert(`A maior nota da turma foi: ${maxNota} \n Os alunos que tiveram as maiores notas foram: ${melhoresAlunos}`)
+    }
+    
+   </script> 
+</body>
+</html>

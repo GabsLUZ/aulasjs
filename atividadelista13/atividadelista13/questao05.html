@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao05</title>
+</head>
+<body>
+    <script>
+        let nome = []
+        let idade = []
+        let preferencial = []
+        let normal = []
+        let dado = []
+
+        while(true){
+            let nomeCliente = prompt('Digite o nome do cliente (se desejar sair, digite "FIM"): ');
+            if (nomeCliente.toLowerCase() == 'FIM'){
+                break;
+            }
+            let idadaCliente = Number(prompt('Digite a idade do Cliente: '));
+            nome.push(nomeCliente)
+            idade.push(idadeCliente)
+        }
+
+        for(let i = 0; i < nome.length; i++){
+            dado[i] = {
+                nome: nome[i],
+                idade: idade[i]
+            }
+        }
+        normal = dado.filter(cliente => cliente.idade < 60)
+        preferencial =  dado.filter(cliente => cliente.idade >= 60)
+
+        let fila = []
+
+        preferencial.forEach(ben => {
+            fila.push(ben.nome)
+        })
+
+        normal.forEach(ben => {
+            fila.push(ben.nome)
+        })
+
+        alert(`A ordem da fila é: ${fila}.`)
+    </script>
+</body>
+</html>

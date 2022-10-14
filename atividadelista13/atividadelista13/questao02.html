@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao02</title>
+</head>
+<body>
+    <script>
+        let numero = 11
+        let array1 = []
+        let array2 = []
+        let x = 0
+        let resultado = ''
+
+        for(let i = 0; i < numero; i++){
+            let input = Number(prompt('Digite os 11 número:'))
+            array1.push(input)
+        }
+
+        x = array1[numero - 1]
+        array1.pop()
+
+        array1.forEach(num => {
+            array2.push(num*x)
+        })
+
+        resultado += `Os valores inseridos no array 1 foram: ${array1}\n`
+        resultado += `O valor multiplicado por X é: ${x}\n`
+        resultado += `Os valores multiplicados, armazenados no array 2, são: ${array2}\n`
+
+        alert(resultado)
+
+
+    </script>
+</body>
+</html>

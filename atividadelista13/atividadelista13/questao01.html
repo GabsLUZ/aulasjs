@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao01</title>
+</head>
+<body>
+    <script>
+        let nomeAluno = []
+        let notaAluno= []
+        let quantidadeAluno = 5
+        let contador = 0
+        let resposta = ''
+
+        while(contador < quantidadeAluno){
+            let nome = prompt('Digite o nome do aluno: ')
+            let nota = Number(prompt('Digite a nota do aluno: '))
+
+            nomeAluno.push(nome)
+            notaAluno.push(nota)
+            contador++
+        }
+        for(let i = 0; i < nomeAluno.length; i++){
+            resposta += `A nota do aluno ${nomeAluno[i]} foi: ${notaAluno[i]}\n`
+
+        }
+
+        let somaNota = notaAluno.reduce(
+            (valorAnterior, valorAtual) => valorAnterior + valorAtual, 0 );
+
+        let media = somaNota / notaAluno.length
+
+        resultado += `A média das notas é: ${media}`
+
+        alert(resultado)
+
+
+    </script>
+</body>
+</html>
